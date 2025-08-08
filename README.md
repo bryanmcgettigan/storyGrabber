@@ -1,5 +1,5 @@
 # storyGrabber
-This project will grab stories and using the kittenTTS will create a spoken version of the stories
+This project scrapes stories from reddit and using the kittenTTS will generate a spoken version of the stories
 
 The stories grabbed will be a randomly selected two sentence horror story from https://www.reddit.com/r/TwoSentenceHorror/
 
