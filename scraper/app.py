@@ -37,7 +37,7 @@ def grabStory(headers,PostNumber,subreddit):
     if len(posts) < PostNumber:
         print(f"Not enough posts found in /r/{subreddit}.")
         return None
-    fullStory = "filler "+ posts[PostNumber -1]['data']['title'] + ". " + posts[PostNumber-1]['data']['selftext'] + " filler"#Includes title of the post and the accompying body. The filler is so the speech includes the full text without cutting out the start and ending
+    fullStory = posts[PostNumber -1]['data']['title'] + ". " + posts[PostNumber-1]['data']['selftext'] + " filler"#Includes title of the post and the accompying body. The filler is so the speech includes the full text without cutting out the start and ending
     
     return fullStory
 

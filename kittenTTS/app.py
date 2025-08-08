@@ -8,8 +8,6 @@ def generateAudio(text):
         model_name="KittenML/kitten-tts-nano-0.1",
 
     )
-
-
     audio = m.generate(text, voice='expr-voice-3-m' )
 
     return audio
