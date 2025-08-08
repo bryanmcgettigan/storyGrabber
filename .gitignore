@@ -1,0 +1,8 @@
+.env
+pyvenv.cfg
+__pycache__/
+*.pyc
+bin
+lib
+share
+include
