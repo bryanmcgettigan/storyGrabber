@@ -14,17 +14,17 @@ def load_env():
     REDDIT_USERNAME = os.getenv('REDDIT_USERNAME')
 
 def main():
+    
     load_env()#Load environmental values
 
     postNumber = random.randint(1, 10) #pick a random number between 1-10 of the top posts of the last week
-
     headers = authenticate(CLIENT_ID,SECRET_ID,PASSWORD,REDDIT_USERNAME)
     subreddit="TwoSentenceHorror" #Reads out a two sentence horror story from reddit
     story = grabStory(headers,postNumber,subreddit)
-
+    print(f"Generating audio for the following story: \n {story}")
     
     audio = generateAudio(story)
-
+    print("Playing audio...")
     sd.play(audio, samplerate=24500)
     sd.wait()
 
